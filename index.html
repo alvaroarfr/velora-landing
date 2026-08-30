@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Velora</title>
+<meta name="description" content="Velora turns concepts into cinematic spaces, environments, and visual experiences in minutes.">
+<meta name="theme-color" content="#050505">
+<style>/* cyrillic-ext */
+/* cyrillic */
+/* vietnamese */
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-67347da9.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-6bd6022c.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+/* cyrillic */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-f14efa71.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-53f52980.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-29fa950c.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/font-0aaab0f8.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@media (hover: hover) {
+.vh-1:hover {
+  border-color:rgba(232,227,217,0.5) !important;
+  background:rgba(232,227,217,0.06) !important;
+}
+}
+@media (hover: hover) {
+.vh-2:hover {
+  border-color:#2A2A2A !important;
+  background:#0C0C0C !important;
+}
+}
+@media (hover: hover) {
+.vh-3:hover {
+  border-color:#2A2A2A !important;
+}
+}
+@media (hover: hover) {
+.vh-4:hover {
+  border-color:#2A2A2A !important;
+  transform:translateY(-3px) !important;
+}
+}
+@media (hover: hover) {
+.vh-5:hover {
+  transform:translateY(-6px) !important;
+}
+}
+@media (hover: hover) {
+.vh-6:hover {
+  border-color:#5B9DFF55 !important;
+  background:rgba(232,227,217,0.03) !important;
+}
+}
+@media (hover: hover) {
+.vh-7:hover {
+  border-color:#5BD98A55 !important;
+  background:rgba(232,227,217,0.03) !important;
+}
+}
+@media (hover: hover) {
+.vh-8:hover {
+  border-color:#B08CFF55 !important;
+  background:rgba(232,227,217,0.03) !important;
+}
+}
+@media (hover: hover) {
+.vh-9:hover {
+  border-color:#4A4A4A !important;
+  background:#101010 !important;
+}
+}
+@media (hover: hover) {
+.vh-10:hover {
+  transform:translateY(-1px) !important;
+}
+}
+@media (hover: hover) {
+.vh-11:hover {
+  transform:translateY(-2px) !important;
+  box-shadow:0 14px 40px rgba(232,227,217,0.18) !important;
+}
+}
+@media (hover: hover) {
+.vh-12:hover {
+  color:#E8E3D9 !important;
+}
+}
+</style>
+<style>/* Satoshi */
+@font-face {
+  font-family: 'Satoshi';
+  src: url("assets/font-e6167424.woff2") format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url("assets/font-692445ce.woff2") format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+</style>
+<script src="assets/gsap.js"></script>
+<script src="assets/scrolltrigger.js"></script>
+<style>
+:root { --accent: #E8E3D9; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #050505; color: #E8E3D9; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #E8E3D9; }
+button { font-family: inherit; cursor: pointer; }
+::selection { background: #2A2A28; color: #E8E3D9; }
+@keyframes veloraPulse { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+@keyframes veloraMarquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+@media (prefers-reduced-motion: reduce) { .velora-marquee-track { animation: none !important; } }
+.velora-feature-grid { grid-template-columns: repeat(2,1fr); }
+@media (min-width: 820px) { .velora-feature-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 700px) {
+  [data-gen-card] { display: grid; grid-template-columns: 1fr 1fr; column-gap: 14px; align-items: center; min-height: 0; }
+  [data-gen-card] > *:not([data-gen-img]) { grid-column: 1; }
+  [data-gen-card] [data-gen-img] { grid-column: 2; grid-row: 1 / -1; margin-top: 0; }
+}
+
+/* ---------- navigation ---------- */
+/* stacking scale: nav 60 · mobile menu 55 (the sheet opens under the bar, which stays live) */
+.velora-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+  padding: 16px max(20px, env(safe-area-inset-right)) 16px max(20px, env(safe-area-inset-left));
+  padding-top: max(16px, env(safe-area-inset-top));
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  transition: background 0.5s ease, backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease, border-color 0.5s ease;
+  contain: layout paint;
+}
+.velora-nav[data-scrolled] {
+  padding-top: max(11px, env(safe-area-inset-top));
+  padding-bottom: 11px;
+  background: rgba(5,5,5,0.62);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border-bottom-color: rgba(232,227,217,0.08);
+}
+.velora-nav-row { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.velora-nav-brand { display: flex; align-items: center; flex: 0 0 auto; }
+.velora-nav-brand img { height: 26px; width: auto; display: block; }
+.velora-nav-links { display: flex; align-items: center; gap: 22px; }
+.velora-nav-link, .velora-nav-signin {
+  position: relative; display: inline-flex; align-items: center;
+  min-height: 32px; padding: 5px 2px;
+  font-size: 14.5px; line-height: 1.2; color: rgba(232,227,217,0.85);
+  transition: color 0.3s ease;
+}
+.velora-nav-link[aria-current] { color: #E8E3D9; }
+.velora-nav-link[aria-current]::after { content: ""; position: absolute; left: 2px; right: 2px; bottom: 0; height: 1px; background: var(--accent); }
+.velora-nav-actions { display: flex; align-items: center; gap: 14px; }
+.velora-nav-cta, .velora-hero-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 500; color: #050505; background: #E8E3D9;
+  border-radius: 999px; white-space: nowrap;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.velora-nav-cta { min-height: 40px; font-size: 14.5px; padding: 10px 18px; }
+/* transparent border keeps it the same height as the outlined "See the gallery" beside it */
+.velora-hero-cta { font-size: 14px; padding: 13px 24px; border: 1px solid transparent; }
+.velora-nav-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 44px; height: 44px; margin-right: -10px;
+  padding: 0; border: 0; background: transparent; color: #E8E3D9;
+}
+.velora-burger { position: relative; display: block; width: 20px; height: 11px; }
+.velora-burger span { position: absolute; left: 0; width: 100%; height: 1.5px; border-radius: 2px; background: currentColor; transition: transform 0.45s cubic-bezier(0.16,1,0.3,1); }
+.velora-burger span:first-child { top: 0; }
+.velora-burger span:last-child { bottom: 0; }
+.velora-nav-toggle[aria-expanded="true"] .velora-burger span:first-child { transform: translateY(4.75px) rotate(45deg); }
+.velora-nav-toggle[aria-expanded="true"] .velora-burger span:last-child { transform: translateY(-4.75px) rotate(-45deg); }
+.velora-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (hover: hover) {
+  .velora-nav-link:hover, .velora-nav-signin:hover { color: #E8E3D9; }
+  .velora-nav-cta:hover, .velora-hero-cta:hover { background: #FFFFFF; color: #050505; transform: translateY(-1px); }
+  .velora-nav-toggle:hover .velora-burger span { background: #FFFFFF; }
+}
+.velora-nav a:focus-visible, .velora-nav button:focus-visible,
+.velora-menu a:focus-visible, .velora-menu button:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 8px;
+}
+
+/* ---------- mobile menu sheet ---------- */
+/* closed state is visibility, never opacity: nothing here depends on a transition running */
+.velora-menu {
+  position: fixed; inset: 0; z-index: 55;
+  display: flex; flex-direction: column;
+  padding: calc(var(--velora-nav-h, 64px) + 10px) max(20px, env(safe-area-inset-right)) max(26px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  background: radial-gradient(120% 68% at 50% 0%, #0B0C0E 0%, #050505 58%);
+  overflow-y: auto; overscroll-behavior: contain;
+  visibility: hidden; pointer-events: none;
+}
+.velora-menu[data-open] { visibility: visible; pointer-events: auto; }
+.velora-menu-list { display: flex; flex-direction: column; margin-top: auto; }
+.velora-menu-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 62px; padding: 15px 2px;
+  border-top: 1px solid #1B1B1B;
+  font-size: 24px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1;
+  color: rgba(232,227,217,0.62);
+  transition: opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1), color 0.3s ease;
+}
+.velora-menu-item:last-of-type { border-bottom: 1px solid #1B1B1B; }
+.velora-menu-item[aria-current] { color: #E8E3D9; }
+.velora-menu-item[aria-current] .velora-menu-here { opacity: 1; }
+.velora-menu-here {
+  flex: 0 0 auto; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); opacity: 0; transition: opacity 0.3s ease;
+}
+.velora-menu-foot {
+  display: flex; align-items: center; gap: 12px; margin-top: 24px;
+  transition: opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1);
+}
+/* entrance: opted into only when the page can actually animate out of it */
+.velora-menu[data-enter] .velora-menu-item,
+.velora-menu[data-enter] .velora-menu-foot { opacity: 0; transform: translateY(16px); transition: none; }
+.velora-menu-item:nth-child(1) { transition-delay: 30ms; }
+.velora-menu-item:nth-child(2) { transition-delay: 75ms; }
+.velora-menu-item:nth-child(3) { transition-delay: 120ms; }
+.velora-menu-item:nth-child(4) { transition-delay: 165ms; }
+.velora-menu-item:nth-child(5) { transition-delay: 210ms; }
+.velora-menu-foot { transition-delay: 255ms; }
+.velora-menu-signin {
+  flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 50px; padding: 12px 20px; border-radius: 999px;
+  border: 1px solid rgba(232,227,217,0.22); background: rgba(232,227,217,0.02);
+  font-size: 14.5px; color: #E8E3D9;
+}
+.velora-menu-cta {
+  flex: 1 1 auto; display: inline-flex; align-items: center; justify-content: center;
+  min-height: 50px; padding: 12px 20px; border-radius: 999px;
+  background: #E8E3D9; color: #050505; font-size: 14.5px; font-weight: 500;
+}
+@media (hover: hover) {
+  .velora-menu-item:hover { color: #E8E3D9; }
+  .velora-menu-signin:hover { border-color: rgba(232,227,217,0.5); color: #E8E3D9; }
+  .velora-menu-cta:hover { background: #FFFFFF; color: #050505; }
+}
+/* touch input gets the full 44px comfort target, pointers keep the tighter bar */
+@media (pointer: coarse) {
+  .velora-nav-brand, .velora-nav-link, .velora-nav-signin { min-height: 44px; }
+}
+.velora-locked { overflow: hidden; }
+
+@media (max-width: 819.98px) {
+  .velora-nav { padding-top: max(12px, env(safe-area-inset-top)); padding-bottom: 12px; }
+  .velora-nav[data-scrolled] { padding-top: max(9px, env(safe-area-inset-top)); padding-bottom: 9px; }
+  .velora-nav-links, .velora-nav-actions .velora-nav-signin { display: none; }
+  .velora-nav-toggle { display: inline-flex; }
+  .velora-nav-actions { gap: 10px; }
+  .velora-nav-cta { font-size: 13.5px; padding: 9px 16px; min-height: 38px; }
+  /* sheet open: the bar carries the logo and the close control, nothing else */
+  .velora-nav[data-menu-open] .velora-nav-cta { display: none; }
+}
+@media (min-width: 820px) { .velora-menu { display: none; } }
+@media (max-width: 359.98px) {
+  .velora-nav-brand img { height: 22px; }
+  .velora-cta-long { display: none; }
+  .velora-menu-item { font-size: 22px; min-height: 58px; }
+}
+@media (min-width: 360px) { .velora-cta-short { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .velora-menu-item, .velora-menu-foot, .velora-burger span {
+    transition-duration: 0.01ms !important; transition-delay: 0ms !important;
+  }
+}
+</style>
+</head>
+<body>
+<div data-ref="rootRef" style="background:#050505;color:#E8E3D9;font-family:'Satoshi',system-ui,sans-serif;overflow-x:hidden;position:relative">
+
+<nav data-ref="navRef" class="velora-nav" aria-label="Primary">
+  <div class="velora-nav-row">
+    <a href="#top" class="velora-nav-brand" aria-label="Velora, back to top">
+      <img src="assets/image-97514d81.webp" alt="Velora" width="226" height="52" decoding="async">
+    </a>
+    <div class="velora-nav-links">
+      <a href="#product" class="velora-nav-link" data-navlink="product">Product</a>
+      <a href="#features" class="velora-nav-link" data-navlink="features">Features</a>
+      <a href="#workflow" class="velora-nav-link" data-navlink="workflow">Workflow</a>
+      <a href="#pricing" class="velora-nav-link" data-navlink="pricing">Pricing</a>
+      <a href="#gallery" class="velora-nav-link" data-navlink="gallery">Gallery</a>
+    </div>
+    <div class="velora-nav-actions">
+      <a href="#pricing" class="velora-nav-signin">Sign in</a>
+      <a href="#cta" class="velora-nav-cta"><span class="velora-cta-long">Start creating &rarr;</span><span class="velora-cta-short">Start</span></a>
+      <button type="button" class="velora-nav-toggle" data-menu="toggle" aria-expanded="false" aria-controls="velora-menu">
+        <span class="velora-burger" aria-hidden="true"><span></span><span></span></span>
+        <span class="velora-sr">Menu</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="velora-menu" class="velora-menu" role="dialog" aria-label="Site menu">
+  <nav class="velora-menu-list" aria-label="Sections">
+    <a href="#product" class="velora-menu-item" data-navlink="product" data-menu="close">Product<span class="velora-menu-here" aria-hidden="true"></span></a>
+    <a href="#features" class="velora-menu-item" data-navlink="features" data-menu="close">Features<span class="velora-menu-here" aria-hidden="true"></span></a>
+    <a href="#workflow" class="velora-menu-item" data-navlink="workflow" data-menu="close">Workflow<span class="velora-menu-here" aria-hidden="true"></span></a>
+    <a href="#pricing" class="velora-menu-item" data-navlink="pricing" data-menu="close">Pricing<span class="velora-menu-here" aria-hidden="true"></span></a>
+    <a href="#gallery" class="velora-menu-item" data-navlink="gallery" data-menu="close">Gallery<span class="velora-menu-here" aria-hidden="true"></span></a>
+  </nav>
+  <div class="velora-menu-foot">
+    <a href="#pricing" class="velora-menu-signin" data-menu="close">Sign in</a>
+    <a href="#cta" class="velora-menu-cta" data-menu="close">Start creating &rarr;</a>
+  </div>
+</div>
+
+<section id="top" data-screen-label="Hero" data-ref="heroRef" style="position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;padding:120px 20px 44px">
+  <div data-ref="heroImgRef" style="position:absolute;inset:-8% 0 -8% 0;z-index:0">
+    <video data-hero-video="1" data-ref="heroVideoRef" autoplay muted loop playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block"></video>
+  </div>
+  <div style="position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(5,5,5,0.72) 0%,rgba(5,6,7,0.28) 34%,rgba(5,6,7,0.55) 72%,#050505 100%)"></div>
+  <div style="position:absolute;inset:0;z-index:1;background:radial-gradient(120% 80% at 50% 40%,rgba(16,16,16,0) 0%,rgba(5,6,7,0.62) 100%)"></div>
+  <canvas data-ref="canvasRef" style="position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none;opacity:0"></canvas>
+
+  <div style="position:relative;z-index:3;max-width:820px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:26px">
+    <h1 data-hero="2" style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(46px,8.4vw,116px);line-height:0.94;letter-spacing:-0.028em;color:#F4F1EA;text-shadow:0 2px 40px rgba(5,6,7,0.5)">Ideas become <span style="font-style:italic">places.</span></h1>
+    <p data-hero="3" style="margin:0;max-width:520px;font-size:16px;line-height:1.6;color:rgba(232,227,217,0.74)">Velora transforms concepts into cinematic spaces, environments, and visual experiences in minutes.</p>
+    <div data-hero="4" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center">
+      <a href="#cta" class="velora-hero-cta">Start creating →</a>
+      <a href="#gallery" style="font-size:14px;font-weight:500;color:#E8E3D9;padding:13px 24px;white-space:nowrap;border-radius:999px;border:1px solid rgba(232,227,217,0.22);background:rgba(5,6,7,0.35);backdrop-filter:blur(10px);transition:border-color 0.35s ease,background 0.35s ease" data-hover="vh-1">See the gallery</a>
+    </div>
+  </div>
+</section>
+
+<section id="product" data-screen-label="What Velora does" style="max-width:1280px;margin:0 auto;padding:clamp(88px,10vw,150px) 20px 0">
+  <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;margin-bottom:52px">
+    <h2 style="margin:0;max-width:740px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-0.022em;color:#E8E3D9;text-wrap:balance">From a thought to a complete <span style="font-style:italic">visual world.</span></h2>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:14px">
+   <div style="display:flex;flex-wrap:wrap;gap:14px">
+    <div data-reveal="1" style="flex:1 1 300px;border:1px solid #1B1B1B;border-radius:16px;background:#0A0A0A;padding:26px;display:flex;flex-direction:column;gap:12px;min-height:270px;transition:border-color 0.4s ease,background 0.4s ease" data-hover="vh-2">
+      <h3 style="margin:0;font-size:17px;font-weight:500;color:#E8E3D9">Generate</h3>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:#8A8A87;max-width:300px">Describe anything. Start with a prompt, reference image, sketch, or rough idea.</p>
+      <div style="margin-top:auto;display:flex;align-items:center;justify-content:center">
+        <img src="assets/image-b8f650a1.webp" alt="Prompt bar: Generate a mountain residence" style="width:100%;height:auto;display:block;object-fit:contain;background:transparent" width="1262" height="297" decoding="async" loading="lazy">
+      </div>
+    </div>
+
+    <div data-reveal="1" style="flex:2 1 440px;border:1px solid #1B1B1B;border-radius:16px;background:#0A0A0A;padding:26px;display:flex;flex-direction:column;gap:12px;min-height:270px;position:relative;overflow:hidden;transition:border-color 0.4s ease" data-hover="vh-3">
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46%;opacity:0.5;mask-image:linear-gradient(to left,#000 20%,transparent 100%);-webkit-mask-image:linear-gradient(to left,#000 20%,transparent 100%)">
+        <img src="assets/image-e1b3e163.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:82% 45%;display:block;filter:saturate(0.7) contrast(1.05)" width="702" height="395" decoding="async" loading="lazy">
+      </div>
+      <h3 style="position:relative;margin:0;font-size:17px;font-weight:500;color:#E8E3D9">Transform</h3>
+      <p style="position:relative;margin:0;font-size:14px;line-height:1.6;color:#8A8A87;max-width:320px">Shape the direction. Change materials, lighting, architecture, atmosphere and composition without starting over.</p>
+      <div style="position:relative;margin-top:auto;display:flex;align-items:center">
+        <img src="assets/image-ea26966a.webp" alt="Concrete, fog 60%" style="width:95%;max-width:340px;height:auto;display:block" width="680" height="146" decoding="async" loading="lazy">
+      </div>
+    </div>
+   </div>
+
+   <div style="display:flex;flex-wrap:wrap;gap:14px">
+    <div data-reveal="1" style="flex:2 1 440px;border:1px solid #1B1B1B;border-radius:16px;background:#0A0A0A;padding:26px;display:flex;flex-direction:column;gap:12px;min-height:250px;transition:border-color 0.4s ease" data-hover="vh-3">
+      <h3 style="margin:0;font-size:17px;font-weight:500;color:#E8E3D9">Animate</h3>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:#8A8A87;max-width:360px">Bring the world to life. Turn still concepts into cinematic sequences and camera movements.</p>
+      <div style="margin-top:auto;border-radius:10px;background:transparent;overflow:hidden;height:96px;display:flex;align-items:center;justify-content:center;padding:0">
+        <img src="assets/image-dad625e0.webp" alt="Timeline amplitude graph" style="width:100%;height:100%;object-fit:fill;display:block" width="1420" height="315" decoding="async" loading="lazy">
+      </div>
+    </div>
+
+    <div data-reveal="1" style="flex:1 1 300px;border:1px solid #1B1B1B;border-radius:16px;background:#0A0A0A;padding:26px;display:flex;flex-direction:column;gap:12px;min-height:250px;transition:border-color 0.4s ease" data-hover="vh-3">
+      <h3 style="margin:0;font-size:17px;font-weight:500;color:#E8E3D9">Collaborate</h3>
+      <p style="margin:0;font-size:14px;line-height:1.6;color:#8A8A87">Create together. Share visual directions with your team and iterate in real time.</p>
+      <div style="margin-top:auto;display:flex;align-items:center">
+        <img src="assets/image-43f4535e.webp" alt="" style="width:30px;height:30px;border-radius:50%;object-fit:cover;border:1px solid #050505;display:block" width="60" height="58" decoding="async" loading="lazy">
+        <img src="assets/image-3778acaf.webp" alt="" style="width:30px;height:30px;border-radius:50%;object-fit:cover;border:1px solid #050505;margin-left:-9px;display:block" width="60" height="60" decoding="async" loading="lazy">
+        <img src="assets/image-33555239.webp" alt="" style="width:30px;height:30px;border-radius:50%;object-fit:cover;border:1px solid #050505;margin-left:-9px;display:block" width="60" height="60" decoding="async" loading="lazy">
+        <span style="margin-left:11px;font-family:'Satoshi',system-ui,sans-serif;font-size:11.5px;font-weight:500;letter-spacing:0.08em;color:#6F6F6C">+3 IN SCENE</span>
+      </div>
+    </div>
+   </div>
+  </div>
+</section>
+
+<section id="features" data-screen-label="Feature grid" style="max-width:1280px;margin:0 auto;padding:clamp(88px,10vw,150px) 20px 0">
+  <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;margin-bottom:52px">
+    <h2 style="margin:0;max-width:680px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-0.022em;color:#E8E3D9;text-wrap:balance">Designed for <span style="font-style:italic">visual thinking.</span></h2>
+  </div>
+  <div class="velora-feature-grid" style="display:grid;gap:14px">
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:14px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.4s ease,transform 0.4s ease" data-hover="vh-4">
+      <img src="assets/image-eb8003e7.svg" alt="" style="width:22px;height:22px;display:block;margin-bottom:6px">
+      <h3 style="margin:0;font-size:15.5px;font-weight:500;color:#E8E3D9">Reference Lock</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">Keep the geometry, composition or character of your original reference.</p>
+    </div>
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:14px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.4s ease,transform 0.4s ease" data-hover="vh-4">
+      <img src="assets/image-4b6d1aed.svg" alt="" style="width:22px;height:22px;display:block;margin-bottom:6px">
+      <h3 style="margin:0;font-size:15.5px;font-weight:500;color:#E8E3D9">Material Studio</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">Swap concrete, glass, wood, stone and metal instantly.</p>
+    </div>
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:14px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.4s ease,transform 0.4s ease" data-hover="vh-4">
+      <img src="assets/image-1f773836.svg" alt="" style="width:22px;height:22px;display:block;margin-bottom:6px">
+      <h3 style="margin:0;font-size:15.5px;font-weight:500;color:#E8E3D9">Camera Control</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">Define lens, perspective, camera position and movement.</p>
+    </div>
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:14px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.4s ease,transform 0.4s ease" data-hover="vh-4">
+      <img src="assets/image-c11fa665.svg" alt="" style="width:22px;height:22px;display:block;margin-bottom:6px">
+      <h3 style="margin:0;font-size:15.5px;font-weight:500;color:#E8E3D9">Atmosphere</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">Control fog, weather, time of day and lighting.</p>
+    </div>
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:14px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.4s ease,transform 0.4s ease" data-hover="vh-4">
+      <img src="assets/image-ec81bc67.svg" alt="" style="width:22px;height:22px;display:block;margin-bottom:6px">
+      <h3 style="margin:0;font-size:15.5px;font-weight:500;color:#E8E3D9">Style Engine</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">Explore radically different visual directions without rebuilding the scene.</p>
+    </div>
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:14px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.4s ease,transform 0.4s ease" data-hover="vh-4">
+      <img src="assets/image-90f73c0b.svg" alt="" style="width:22px;height:22px;display:block;margin-bottom:6px">
+      <h3 style="margin:0;font-size:15.5px;font-weight:500;color:#E8E3D9">Team Spaces</h3>
+      <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">Collect references, concepts and iterations in one place.</p>
+    </div>
+  </div>
+</section>
+
+<section id="workflow" data-screen-label="Workflow" style="max-width:1280px;margin:0 auto;padding:clamp(88px,10vw,150px) 20px 0">
+  <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;margin-bottom:52px">
+    <h2 style="margin:0;max-width:760px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-0.022em;color:#E8E3D9;text-wrap:balance">Less rendering. <span style="font-style:italic">More imagining.</span></h2>
+    <p style="margin:0;max-width:520px;font-size:15px;line-height:1.65;color:#8A8A87">From concept to final visual in three steps.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px">
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:20px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:18px;transition:border-color 0.4s ease,background 0.4s ease" data-hover="vh-2">
+      <div style="display:flex;align-items:center;justify-content:center;padding:8px 0 4px;min-height:190px">
+        <img src="assets/image-12be07ab.webp" loading="lazy" alt="Isometric alpine mountain scene" style="width:78%;max-width:250px;height:auto;display:block;object-fit:contain;transition:transform 0.9s cubic-bezier(0.16,1,0.3,1)" data-hover="vh-5" width="500" height="448" decoding="async">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.01em;color:#E8E3D9">Create a new scene</h3>
+        <p style="margin:0;font-size:14.5px;line-height:1.55;color:#8A8A87;max-width:280px">Start from scratch and shape your vision.</p>
+      </div>
+      <div style="margin-top:auto;display:flex;align-items:center;gap:14px;border:1px solid rgba(232,227,217,0.1);border-radius:14px;padding:12px 14px;transition:border-color 0.35s ease,background 0.35s ease" data-hover="vh-6">
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid #5B9DFF33;color:#5B9DFF"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg></span>
+        <span style="flex:1;font-size:15px;font-weight:500;color:#E8E3D9">New Scene</span>
+        <span style="flex:0 0 auto;display:flex;color:#5B9DFF"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:20px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:18px;transition:border-color 0.4s ease,background 0.4s ease" data-hover="vh-2">
+      <div style="display:flex;align-items:center;justify-content:center;padding:8px 0 4px;min-height:190px">
+        <img src="assets/image-e33c2750.webp" loading="lazy" alt="Three material spheres" style="width:78%;max-width:250px;height:auto;display:block;object-fit:contain;transition:transform 0.9s cubic-bezier(0.16,1,0.3,1)" data-hover="vh-5" width="500" height="426" decoding="async">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.01em;color:#E8E3D9">Adjust materials</h3>
+        <p style="margin:0;font-size:14.5px;line-height:1.55;color:#8A8A87;max-width:280px">Fine-tune textures, colors and surface details.</p>
+      </div>
+      <div style="margin-top:auto;display:flex;align-items:center;gap:14px;border:1px solid rgba(232,227,217,0.1);border-radius:14px;padding:12px 14px;transition:border-color 0.35s ease,background 0.35s ease" data-hover="vh-7">
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid #5BD98A33;color:#5BD98A"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path><circle cx="9" cy="7" r="2" fill="#0A0A0A" stroke="currentColor" stroke-width="1.4"></circle><circle cx="15" cy="12" r="2" fill="#0A0A0A" stroke="currentColor" stroke-width="1.4"></circle><circle cx="10" cy="17" r="2" fill="#0A0A0A" stroke="currentColor" stroke-width="1.4"></circle></svg></span>
+        <span style="flex:1;font-size:15px;font-weight:500;color:#E8E3D9">Open Materials</span>
+        <span style="flex:0 0 auto;display:flex;color:#5BD98A"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:20px;background:#0A0A0A;padding:24px;display:flex;flex-direction:column;gap:18px;transition:border-color 0.4s ease,background 0.4s ease" data-hover="vh-2">
+      <div style="display:flex;align-items:center;justify-content:center;padding:8px 0 4px;min-height:190px">
+        <img src="assets/image-2973f7e9.webp" loading="lazy" alt="Stacked 4K export layers" style="width:78%;max-width:250px;height:auto;display:block;object-fit:contain;transition:transform 0.9s cubic-bezier(0.16,1,0.3,1)" data-hover="vh-5" width="500" height="427" decoding="async">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h3 style="margin:0;font-size:22px;font-weight:500;letter-spacing:-0.01em;color:#E8E3D9">Export your scene</h3>
+        <p style="margin:0;font-size:14.5px;line-height:1.55;color:#8A8A87;max-width:280px">Download in high quality and share your work.</p>
+      </div>
+      <div style="margin-top:auto;display:flex;align-items:center;gap:14px;border:1px solid rgba(232,227,217,0.1);border-radius:14px;padding:12px 14px;transition:border-color 0.35s ease,background 0.35s ease" data-hover="vh-8">
+        <span style="flex:0 0 auto;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid #B08CFF33;color:#B08CFF"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4V15M8 11L12 15L16 11M5 18.5V20H19V18.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+        <span style="flex:1;font-size:15px;font-weight:500;color:#E8E3D9">Export</span>
+        <span style="flex:0 0 auto;display:flex;color:#B08CFF"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+<section id="pricing" data-screen-label="Pricing" style="max-width:1280px;margin:0 auto;padding:clamp(88px,10vw,150px) 20px 0">
+  <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;margin-bottom:40px">
+    <h2 style="margin:0;max-width:700px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-0.022em;color:#E8E3D9;text-wrap:balance">Pick the plan that fits <span style="font-style:italic">how you work.</span></h2>
+    <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid #1B1B1B;border-radius:999px;background:#0A0A0A;padding:5px">
+      <button data-period="monthly" style="border:none;background:#E8E3D9;color:#050505;border-radius:999px;padding:8px 16px;font-size:12.5px;font-weight:500;transition:background 0.3s ease,color 0.3s ease">Monthly</button>
+      <button data-period="yearly" style="border:none;background:transparent;color:#8A8A87;border-radius:999px;padding:8px 16px;font-size:12.5px;font-weight:500;display:flex;align-items:center;gap:8px;transition:background 0.3s ease,color 0.3s ease">Yearly<span style="font-family: Satoshi; font-size: 9.5px; letter-spacing: 0.12em; color: var(--accent)">−20%</span></button>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;align-items:start">
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:16px;background:#0A0A0A;padding:28px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;font-weight:500;color:#E8E3D9">Explorer</span>
+        <div style="display:flex;align-items:baseline;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1;color:#E8E3D9">€0</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#5A5A57">FOREVER</span>
+        </div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">For discovering the platform.</p>
+      </div>
+      <a href="#cta" style="text-align:center;border:1px solid #2A2A2A;border-radius:999px;padding:11px 18px;font-size:13px;font-weight:500;color:#E8E3D9;transition:border-color 0.3s ease,background 0.3s ease" data-hover="vh-9">Start creating</a>
+      <span style="height:1px;background:#161616;display:block"></span>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>50 generations</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Basic models</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Personal projects</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Standard resolution</span>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="border:1px solid #2E2E2C;border-radius:16px;background:linear-gradient(180deg,#101010 0%,#08080A 65%);padding:28px;display:flex;flex-direction:column;gap:20px;box-shadow:0 30px 90px rgba(232,227,217,0.07);position:relative">
+      <span style="position: absolute; top: 20px; right: 20px; font-family: Satoshi; font-size: 9.5px; letter-spacing: 0.16em; color: #050505; background: var(--accent); border-radius: 999px; padding: 5px 10px">POPULAR</span>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;font-weight:500;color:#E8E3D9">Studio</span>
+        <div style="display:flex;align-items:baseline;gap:6px">
+          <span data-price-num="1" style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1;color:#E8E3D9;font-variant-numeric:tabular-nums">€29</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#7A7A77">/ MONTH</span>
+        </div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#9E9A93">For independent creatives.</p>
+      </div>
+      <a href="#cta" style="text-align:center;background:#E8E3D9;color:#050505;border-radius:999px;padding:11px 18px;font-size:13px;font-weight:500;transition:transform 0.3s ease" data-hover="vh-10">Start with Studio</a>
+      <span style="height:1px;background:#202020;display:block"></span>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#D6D2CA"><span style="color:var(--accent);font-size:11px;line-height:1.5">◆</span>Unlimited projects</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#D6D2CA"><span style="color:var(--accent);font-size:11px;line-height:1.5">◆</span>Advanced models</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#D6D2CA"><span style="color:var(--accent);font-size:11px;line-height:1.5">◆</span>4K exports</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#D6D2CA"><span style="color:var(--accent);font-size:11px;line-height:1.5">◆</span>Animation</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#D6D2CA"><span style="color:var(--accent);font-size:11px;line-height:1.5">◆</span>Reference control</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#D6D2CA"><span style="color:var(--accent);font-size:11px;line-height:1.5">◆</span>Commercial license</span>
+      </div>
+    </div>
+
+    <div data-reveal="1" style="border:1px solid #1B1B1B;border-radius:16px;background:#0A0A0A;padding:28px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:14px;font-weight:500;color:#E8E3D9">Collective</span>
+        <div style="display:flex;align-items:baseline;gap:6px">
+          <span style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1;color:#E8E3D9">Custom</span>
+        </div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#8A8A87">For teams and studios.</p>
+      </div>
+      <a href="#cta" style="text-align:center;border:1px solid #2A2A2A;border-radius:999px;padding:11px 18px;font-size:13px;font-weight:500;color:#E8E3D9;transition:border-color 0.3s ease,background 0.3s ease" data-hover="vh-9">Talk to sales</a>
+      <span style="height:1px;background:#161616;display:block"></span>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Shared workspaces</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Team permissions</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Private models</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>API access</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Priority rendering</span>
+        <span style="display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#B9B4AB"><span style="color:#4F4F4C;font-size:11px;line-height:1.5">◇</span>Dedicated support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" data-screen-label="Gallery" style="max-width:1280px;margin:0 auto;padding:clamp(88px,10vw,150px) 20px 0">
+  <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;margin-bottom:48px">
+    <h2 style="margin:0;max-width:700px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-0.022em;color:#E8E3D9;text-wrap:balance">See what imagination <span style="font-style:italic">looks like.</span></h2>
+  </div>
+
+  <div data-reveal="1" style="display:flex;flex-direction:column;gap:14px">
+    <div style="position:relative;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)">
+      <div class="velora-marquee-track" style="display:flex;gap:14px;width:max-content;animation:veloraMarquee 66s linear infinite">
+        <div style="position:relative;flex:0 0 auto;width:clamp(260px,34vw,430px);aspect-ratio:16/10;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-9646a2ed.webp" loading="lazy" alt="Cherry blossom pavilion overlooking Mount Fuji" style="width:100%;height:100%;object-fit:cover;display:block" width="1600" height="900" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(300px,40vw,500px);aspect-ratio:16/9;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-01b1bc36.webp" loading="lazy" alt="Glass house above a frozen arctic fjord" style="width:100%;height:100%;object-fit:cover;display:block" width="996" height="560" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(250px,32vw,400px);aspect-ratio:16/10;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-63089cd3.webp" loading="lazy" alt="Concrete house in a misty pine forest" style="width:100%;height:100%;object-fit:cover;display:block" width="796" height="448" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(260px,34vw,430px);aspect-ratio:16/10;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-9646a2ed.webp" loading="lazy" alt="Cherry blossom pavilion overlooking Mount Fuji" style="width:100%;height:100%;object-fit:cover;display:block" width="1600" height="900" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(300px,40vw,500px);aspect-ratio:16/9;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-01b1bc36.webp" loading="lazy" alt="Glass house above a frozen arctic fjord" style="width:100%;height:100%;object-fit:cover;display:block" width="996" height="560" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(250px,32vw,400px);aspect-ratio:16/10;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-63089cd3.webp" loading="lazy" alt="Concrete house in a misty pine forest" style="width:100%;height:100%;object-fit:cover;display:block" width="796" height="448" decoding="async">
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)">
+      <div class="velora-marquee-track" style="display:flex;gap:14px;width:max-content;animation:veloraMarquee 66s linear infinite">
+        <div style="position:relative;flex:0 0 auto;width:clamp(300px,40vw,500px);aspect-ratio:16/9;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-9aab6117.webp" loading="lazy" alt="Stone villa on a Mediterranean cliff at sunset" style="width:100%;height:100%;object-fit:cover;display:block" width="996" height="560" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(260px,34vw,430px);aspect-ratio:16/10;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-b9e17625.webp" loading="lazy" alt="Desert house with pool at dusk" style="width:100%;height:100%;object-fit:cover;display:block" width="856" height="482" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(220px,26vw,330px);aspect-ratio:4/3;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-cf02456f.webp" loading="lazy" alt="Mountain residence at dusk" style="width:100%;height:100%;object-fit:cover;display:block" width="1672" height="941" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(300px,40vw,500px);aspect-ratio:16/9;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-9aab6117.webp" loading="lazy" alt="Stone villa on a Mediterranean cliff at sunset" style="width:100%;height:100%;object-fit:cover;display:block" width="996" height="560" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(260px,34vw,430px);aspect-ratio:16/10;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-b9e17625.webp" loading="lazy" alt="Desert house with pool at dusk" style="width:100%;height:100%;object-fit:cover;display:block" width="856" height="482" decoding="async">
+        </div>
+        <div style="position:relative;flex:0 0 auto;width:clamp(220px,26vw,330px);aspect-ratio:4/3;border:1px solid #1B1B1B;border-radius:16px;overflow:hidden;background:#080808">
+          <img src="assets/image-cf02456f.webp" loading="lazy" alt="Mountain residence at dusk" style="width:100%;height:100%;object-fit:cover;display:block" width="1672" height="941" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="FAQ" style="max-width:880px;margin:0 auto;padding:clamp(88px,10vw,150px) 20px 0">
+  <div data-reveal="1" style="display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;margin-bottom:40px">
+    <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(28px,3.8vw,44px);line-height:1.06;letter-spacing:-0.02em;color:#E8E3D9">Questions, <span style="font-style:italic">answered.</span></h2>
+  </div>
+  <div data-reveal="1" style="display:flex;flex-direction:column">
+    <div style="border-top:1px solid #161616">
+      <button data-faq="1" style="width:100%;background:transparent;border:none;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-size:15px;color:#E8E3D9;transition:color 0.3s ease">What is Velora?<span data-faq-icon="1" style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#6F6F6C;transition:transform 0.4s ease,color 0.3s ease">+</span></button>
+      <div data-faq-body="1" style="overflow:hidden;height:0;opacity:0"><p style="margin:0;padding:0 4px 24px;max-width:620px;font-size:14px;line-height:1.65;color:#8A8A87">A visualization studio for people who work in space and light. You describe a place, Velora builds it, and then you keep directing until it looks like the thing in your head.</p></div>
+    </div>
+    <div style="border-top:1px solid #161616">
+      <button data-faq="2" style="width:100%;background:transparent;border:none;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-size:15px;color:#E8E3D9;transition:color 0.3s ease">Can I use my own images?<span data-faq-icon="2" style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#6F6F6C;transition:transform 0.4s ease,color 0.3s ease">+</span></button>
+      <div data-faq-body="2" style="overflow:hidden;height:0;opacity:0"><p style="margin:0;padding:0 4px 24px;max-width:620px;font-size:14px;line-height:1.65;color:#8A8A87">Yes. A site photo, a massing model screenshot, a sketch on a napkin. Reference Lock holds onto the geometry you drew and lets everything else change.</p></div>
+    </div>
+    <div style="border-top:1px solid #161616">
+      <button data-faq="3" style="width:100%;background:transparent;border:none;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-size:15px;color:#E8E3D9;transition:color 0.3s ease">Does Velora generate video?<span data-faq-icon="3" style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#6F6F6C;transition:transform 0.4s ease,color 0.3s ease">+</span></button>
+      <div data-faq-body="3" style="overflow:hidden;height:0;opacity:0"><p style="margin:0;padding:0 4px 24px;max-width:620px;font-size:14px;line-height:1.65;color:#8A8A87">It does. Camera moves up to twelve seconds, at 24 or 30fps, built from a still you've already approved, so the animation matches the frame you signed off on.</p></div>
+    </div>
+    <div style="border-top:1px solid #161616">
+      <button data-faq="4" style="width:100%;background:transparent;border:none;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-size:15px;color:#E8E3D9;transition:color 0.3s ease">Can I use generated work commercially?<span data-faq-icon="4" style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#6F6F6C;transition:transform 0.4s ease,color 0.3s ease">+</span></button>
+      <div data-faq-body="4" style="overflow:hidden;height:0;opacity:0"><p style="margin:0;padding:0 4px 24px;max-width:620px;font-size:14px;line-height:1.65;color:#8A8A87">On Studio and Collective, yes, including client deliverables and competition boards. Explorer is for learning the tool rather than billing for it.</p></div>
+    </div>
+    <div style="border-top:1px solid #161616">
+      <button data-faq="5" style="width:100%;background:transparent;border:none;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-size:15px;color:#E8E3D9;transition:color 0.3s ease">Can my team collaborate?<span data-faq-icon="5" style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#6F6F6C;transition:transform 0.4s ease,color 0.3s ease">+</span></button>
+      <div data-faq-body="5" style="overflow:hidden;height:0;opacity:0"><p style="margin:0;padding:0 4px 24px;max-width:620px;font-size:14px;line-height:1.65;color:#8A8A87">Team Spaces keep references, versions and comments in one place. Two people can direct the same scene at the same time without overwriting each other's work.</p></div>
+    </div>
+    <div style="border-top:1px solid #161616;border-bottom:1px solid #161616">
+      <button data-faq="6" style="width:100%;background:transparent;border:none;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-size:15px;color:#E8E3D9;transition:color 0.3s ease">What AI models does Velora use?<span data-faq-icon="6" style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#6F6F6C;transition:transform 0.4s ease,color 0.3s ease">+</span></button>
+      <div data-faq-body="6" style="overflow:hidden;height:0;opacity:0"><p style="margin:0;padding:0 4px 24px;max-width:620px;font-size:14px;line-height:1.65;color:#8A8A87">A set we tune ourselves on architecture, interiors and environment work, which is why concrete reads like concrete. Collective can bring private models trained on their own archive.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" data-screen-label="Final CTA" style="max-width:1280px;margin:0 auto;padding:clamp(88px,10vw,140px) 20px 0">
+  <div data-reveal="1" style="position:relative;border-radius:20px;overflow:hidden;border:1px solid #1B1B1B;min-height:min(72vh,600px);display:flex;align-items:center;justify-content:center">
+    <img data-ref="ctaImgRef" loading="lazy" src="assets/image-cf02456f.webp" alt="Observatory above the ocean at night" style="position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:62% 58%;filter:saturate(0.7) brightness(0.62) hue-rotate(-10deg);display:block" width="1672" height="941" decoding="async">
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,6,7,0.55),rgba(5,6,7,0.82))"></div>
+    <div style="position:relative;padding:64px 24px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;max-width:680px">
+      <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(34px,5.6vw,72px);line-height:1.02;letter-spacing:-0.024em;color:#F4F1EA;text-wrap:balance">Build the world before <span style="font-style:italic">you build it.</span></h2>
+      <p style="margin:0;max-width:440px;font-size:15.5px;line-height:1.6;color:rgba(232,227,217,0.76)">Start turning ideas into visual experiences today.</p>
+      <a href="#top" style="font-size:14px;font-weight:500;color:#050505;background:#E8E3D9;padding:13px 24px;border-radius:999px;transition:transform 0.35s ease,box-shadow 0.35s ease" data-hover="vh-11">Start creating →</a>
+    </div>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="max-width:1280px;margin:0 auto;padding:clamp(72px,8vw,120px) 20px 40px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:44px;padding-bottom:44px">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:280px">
+      <div style="display:flex;align-items:center">
+        <img src="assets/image-97514d81.webp" alt="Velora" style="height:24px;width:auto;display:block" width="226" height="52" decoding="async">
+      </div>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#6F6F6C">AI visual prototyping for the next generation of creative teams.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:#4F4F4C">PRODUCT</span>
+      <a href="#product" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Generate</a>
+      <a href="#workflow" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Animate</a>
+      <a href="#pricing" style="font-size:13px;color:#8A8A87" data-hover="vh-12">API</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:#4F4F4C">RESOURCES</span>
+      <a href="#faq" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Documentation</a>
+      <a href="#workflow" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Changelog</a>
+      <a href="#gallery" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Examples</a>
+      <a href="#gallery" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Community</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.2em;color:#4F4F4C">COMPANY</span>
+      <a href="#top" style="font-size:13px;color:#8A8A87" data-hover="vh-12">About</a>
+      <a href="#top" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Careers</a>
+      <a href="#cta" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Contact</a>
+      <a href="#top" style="font-size:13px;color:#8A8A87" data-hover="vh-12">Privacy</a>
+    </div>
+  </div>
+  
+</footer>
+
+</div>
+<script src="assets/velora.js" defer></script>
+</body>
+</html>
